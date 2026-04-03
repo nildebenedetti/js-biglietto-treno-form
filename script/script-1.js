@@ -7,9 +7,18 @@ const etaAnni = document.querySelector('#eta-anni');
 const btnForm = document.querySelector('#btn-form');
 
 
-// aggiungere event listener a bottone
 
 //scrivere il prograsmma event handler
+
+function clickBtnFormHandler () {
+    console.log('ma mi senti???');
+    
+}
+
+
+// aggiungere event listener a bottone
+btnForm.addEventListener('click', 'clickBtnFormHandler');
+
 // NB togli il default con paramentro event!
 // COSA FA IL PROGRAMMA?
     // toglie default del form
