@@ -5,7 +5,6 @@ const cognomePax = document.querySelector('#cognome-pax');
 const trattaKm = document.querySelector('#tratta-km');
 const etaAnni = document.querySelector('#eta-anni');
 const btnForm = document.querySelector('.btn-bellissimo');
-const inputValueNome = 0;
 
 //scrivere il prograsmma event handler
 
@@ -14,9 +13,10 @@ function clickBtnFormHandler (event) {
     // inserisco input con valore
     // con il trim, puliamo tutti i valori da spazi extra
     let inputValueNome = nomePax.value.trim();
-    
-    // let inputValue = inputValue.trim();
-    
+    let inputValueCognome = cognomePax.value.trim();
+    let inputValueTratta = trattaKm.value.trim();
+
+    // check itegrity e coherence per nome
     if ( inputValueNome === '' || !isNaN(inputValueNome) ) {
         alert('inserisci un Nome valido!');
     }
@@ -24,6 +24,19 @@ function clickBtnFormHandler (event) {
     if ( inputValueNome.length <= 1) {
         alert('il nome è troppo corto!');
     }
+    // check integrity e coherence cognome
+       if ( inputValueCognome === '' || !isNaN(inputValueCognome) ) {
+        alert('inserisci un cognome valido!');
+    }
+
+    if ( inputValueCognome.length <= 1) {
+        alert('il cognome è troppo corto!');
+    }
+    // check integrity e coherence km
+       if ( inputValueTratta === '' || isNaN(inputValueTratta) ) {
+        alert('inserisci un valore numerico!');
+    }
+
 
     return ;
 
