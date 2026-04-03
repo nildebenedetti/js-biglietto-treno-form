@@ -49,7 +49,7 @@ else if (etaAnni >= 65) {
 
 // prezzo finale = prezzoTratta - sconto
 
-prezzoBiglietto = prezzoTratta - sconto;
+const prezzoBiglietto = prezzoTratta - sconto;
 
 // stampa in cionsole un valore sensato:
 
