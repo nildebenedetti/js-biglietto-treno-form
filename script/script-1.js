@@ -13,9 +13,10 @@ const etaAnni = document.querySelector('#eta-anni');
     // check coerenza e integrita''
         // SE dato non va bene, alert inserisci dato corretto
         // SE tutti i dati ok ---->
-            // RIMUOVERE d-none a container ticket
+            // SCRIVI FUNZIONE PER CALCOLARE IL PREZZO
             // stampa i dati dei campi value con innerHTML
             // dentro la card che HAI PREPARATO, VERO????
+            // RIMUOVERE d-none a container ticket
 
 
 
