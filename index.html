@@ -11,20 +11,31 @@
 </head>
 
 <body>
-
+<!-- inserisco un container con relativa card -->
     <div class="container card-container p-5">
         <div class="card">
+            <!-- strutturo il card header-->
             <div class="card-header">
 
                 <h4 class="form-card-header-title">
                     PomPom Trainlines - Acquista Biglietto
                 </h4>
             </div>
+            <!-- entro nel card body dove ci sono un minimo di istruzioni per user + form-->
             <div class="card-body">
                 <h5 class="card-title">Inserisci i dati del passeggero </h5>
                 <p class="card-text">Il nostro sistema genera la soluzione di viaggio perfetta per te!</p>
                 <form>
-
+                     <div class="mb-3">
+                        <label for="tratta-km" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">es. Namie</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tratta-km" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">es. Woof</div>
+                    </div>
                     <div class="mb-3">
                         <label for="tratta-km" class="form-label">Quanti km devi percorrere?</label>
                         <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
