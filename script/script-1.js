@@ -80,9 +80,10 @@ function clickBtnFormHandler(event) {
     if (inputValueTratta === '' || isNaN(inputValueTratta)) {
         alert('inserisci un valore numerico!');
     }
-
+    // calcolo prezzo
     const prezzoTicket = myTicketPriceCalculator(etaAnni, trattaKm);
-
+    // calcolo nome offerta per biglietto
+    const offertaBiglietto = myOfferSelector(etaAnni);
   
     
     return 
