@@ -90,6 +90,9 @@ function clickBtnFormHandler(event) {
         alert('inserisci un valore numerico!');
     }
     
+    //scrivi prezzo ticket nel campo prezzo
+
+    // scrivi offertaBiglietto nel campo offerta
  
   
     
