@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<!-- inserisco un container con relativa card -->
+    <!-- inserisco un container con relativa card -->
     <div class="container card-container p-5">
         <div class="card">
             <!-- strutturo il card header-->
@@ -26,22 +26,35 @@
                 <h5 class="card-title">Inserisci i dati del passeggero </h5>
                 <p class="card-text">Il nostro sistema genera la soluzione di viaggio perfetta per te!</p>
                 <form>
-                     <div class="mb-3">
-                        <label for="tratta-km" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">es. Namie</div>
-                    </div>
+                    <!-- nomne pax-->
                     <div class="mb-3">
-                        <label for="tratta-km" class="form-label">Cognome</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">es. Woof</div>
+                        <label for="nome-pax" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome-pax" aria-describedby="emailHelp">
+                        <div id="nome-pax" class="form-text">es. Namie</div>
                     </div>
+                    <!-- cognome pax-->
+                    <div class="mb-3">
+                        <label for="cognome-pax" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="cognome-pax" aria-describedby="emailHelp">
+                        <div id="cognome-pax" class="form-text">es. Woof</div>
+                    </div>
+                    <!-- tratta km -->
                     <div class="mb-3">
                         <label for="tratta-km" class="form-label">Quanti km devi percorrere?</label>
                         <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">Inserisci il numero esatto di km che devi percorrere.</div>
+                        <div id="emailHelp" class="form-text">Inserisci il numero esatto di km che devi percorrere.
+                        </div>
                     </div>
-                    
+                    <!-- eta'del pax-->
+                     <div class="mb-3">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Quanti anni hai?</option>
+                        <option value="1">0 - 17</option>
+                        <option value="2">18 - 64</option>
+                        <option value="3">65+</option>
+                    </select>
+                    </div>
+
                     <!-- LO TENGO SE MI SERVE PER DOPO
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -53,6 +66,12 @@
 
         </div>
     </div>
+    <!-- ora metto il mio biglietto con d-none-->
+    <div class="container d-none">
+
+    </div>
+
+
 
     <!--script di Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
