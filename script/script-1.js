@@ -30,6 +30,7 @@ const cognomePax = document.querySelector('#cognome-pax');
 const trattaKm = document.querySelector('#tratta-km');
 const etaAnni = document.querySelector('#eta-anni');
 const btnForm = document.querySelector('.btn-bellissimo');
+const ticketCard = document.querySelector('.ticket-card')
 
 //scrivere il prograsmma event handler
 
@@ -64,7 +65,9 @@ function clickBtnFormHandler(event) {
 
     const prezzoTicket = myTicketPriceCalculator(etaAnni, trattaKm);
     
-    return;
+    return (
+        
+    )
 
 }
 
