@@ -14,6 +14,7 @@
     <!-- inserisco un container con relativa card -->
     <div class="container card-container p-5">
         <div class="card">
+
             <!-- strutturo il card header-->
             <div class="card-header">
 
@@ -23,45 +24,51 @@
             </div>
             <!-- entro nel card body dove ci sono un minimo di istruzioni per user + form-->
             <div class="card-body">
-                <h5 class="card-title">Inserisci i dati del passeggero </h5>
-                <p class="card-text">Il nostro sistema genera la soluzione di viaggio perfetta per te!</p>
-                <form>
-                    <!-- nomne pax-->
-                    <div class="mb-3">
-                        <label for="nome-pax-label" class="form-label">Nome</label>
-                        <input required type="text" class="nome-pax" id="nome-pax" placeholder="Namie" aria-describedby="emailHelp">
-                        <div id="nome-pax" class="form-text">Come ti chiami?</div>
-                    </div>
-                    <!-- cognome pax-->
-                    <div class="mb-3">
-                        <label for="cognome-pax" class="form-label">Cognome</label>
-                        <input required type="text" class="cognome-pax" id="cognome-pax" placeholder="Woof" aria-describedby="emailHelp">
-                        <div id="cognome-pax" class="form-text">Qual e'il tuo cognome?</div>
-                    </div>
-                    <!-- tratta km -->
-                    <div class="mb-3">
-                        <label for="tratta-km" class="form-label">Quanti km devi percorrere?</label>
-                        <input required type="text" class="tyratta-km" id="exampleInputEmail1" placeholder="10" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">Inserisci il numero esatto di km che devi percorrere.
+               
+                    <h5 class="card-title">Inserisci i dati del passeggero </h5>
+                    <p class="card-text">Il nostro sistema genera la soluzione di viaggio perfetta per te!</p>
+                    <form>
+                         <div class="row">
+                        <!-- nomne pax-->
+                        <div class="col-md-6 mb-3">
+                            <label for="nome-pax-label" class="form-label">Nome</label>
+                            <input required type="text" class="nome-pax" id="nome-pax" placeholder="Namie"
+                                aria-describedby="emailHelp">
+                            <div id="nome-pax" class="form-text">Come ti chiami?</div>
                         </div>
-                    </div>
-                    <!-- eta'del pax-->
-                     <div class="mb-3">
-                        <label for="eta-anni-label" class="form-label">Quanti anni hai?</label>
-                    <select required class="eta-anni" aria-label="Default select example">
-                        <option selected>18 - 64</option>
-                        <option value="minor">0 - 17</option>
-                        <option value="major">18 - 64</option>
-                        <option value="elder">65+</option>
-                    </select>
-                    </div>
+                        <!-- cognome pax-->
+                        <div class="col-md-6 mb-3">
+                            <label for="cognome-pax" class="form-label">Cognome</label>
+                            <input required type="text" class="cognome-pax" id="cognome-pax" placeholder="Woof"
+                                aria-describedby="emailHelp">
+                            <div id="cognome-pax" class="form-text">Qual e'il tuo cognome?</div>
+                        </div>
+                        <!-- tratta km -->
+                        <div class="col-md-6 mb-3">
+                            <label for="tratta-km" class="form-label">Quanti km devi percorrere?</label>
+                            <input required type="text" class="tyratta-km" id="exampleInputEmail1" placeholder="10"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">Inserisci il numero esatto di km che devi percorrere.
+                            </div>
+                        </div>
+                        <!-- eta'del pax-->
+                        <div class="col-md-6 mb-3">
+                            <label for="eta-anni-label" class="form-label">Quanti anni hai?</label>
+                            <select required class="eta-anni" aria-label="Default select example">
+                                <option selected>18 - 64</option>
+                                <option value="minor">0 - 17</option>
+                                <option value="major">18 - 64</option>
+                                <option value="elder">65+</option>
+                            </select>
+                        </div>
+                </div>
 
-                    <!-- LO TENGO SE MI SERVE PER DOPO
+                <!-- LO TENGO SE MI SERVE PER DOPO
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div> -->
-                    <button type="submit" class="btn btn-primary btn-bellissimo">Submit</button>
+                <button type="submit" class="btn btn-primary btn-bellissimo">Submit</button>
                 </form>
             </div>
 
