@@ -57,6 +57,10 @@ function clickBtnFormHandler(event) {
     let inputValueNome = nomePax.value.trim();
     let inputValueCognome = cognomePax.value.trim();
     let inputValueTratta = trattaKm.value.trim();
+    // calcolo prezzo
+    const prezzoTicket = myTicketPriceCalculator(etaAnni, trattaKm);
+    // calcolo nome offerta per biglietto
+    const offertaBiglietto = myOfferSelector(etaAnni);
 
     // check itegrity e coherence per nome
     if (inputValueNome === '' || !isNaN(inputValueNome)) {
@@ -68,7 +72,7 @@ function clickBtnFormHandler(event) {
     if (inputValueNome.length <= 1) {
         alert('il nome è troppo corto!');
     } 
-    
+    // inserisci il valore pulito nel campo nome input se ha superato i check
     ticketNomeInput.innerText(inputValueNome);
 
     // check integrity e coherence cognome
@@ -79,16 +83,14 @@ function clickBtnFormHandler(event) {
     if (inputValueCognome.length <= 1) {
         alert('il cognome è troppo corto!');
     }
+    // inserisci il valore pulito nel campo nome input se ha superato i check
     ticketCognomeInput.innerText(inputValueCognome);
     // check integrity e coherence km
     if (inputValueTratta === '' || isNaN(inputValueTratta)) {
         alert('inserisci un valore numerico!');
     }
     
-    // calcolo prezzo
-    const prezzoTicket = myTicketPriceCalculator(etaAnni, trattaKm);
-    // calcolo nome offerta per biglietto
-    const offertaBiglietto = myOfferSelector(etaAnni);
+ 
   
     
     return ticketCard.classList.remove('d-none');
