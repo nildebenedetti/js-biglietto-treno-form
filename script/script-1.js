@@ -4,7 +4,8 @@ const nomePax = document.querySelector('#nome-pax');
 const cognomePax = document.querySelector('#cognome-pax');
 const trattaKm = document.querySelector('#tratta-km');
 const etaAnni = document.querySelector('#eta-anni');
-const btnForm = document.querySelector('#btn-form');
+const btnForm = document.querySelector('.btn-bellissimo');
+
 
 
 
@@ -17,7 +18,7 @@ function clickBtnFormHandler () {
 
 
 // aggiungere event listener a bottone
-btnForm.addEventListener('click', 'clickBtnFormHandler');
+btnForm.addEventListener('click', clickBtnFormHandler);
 
 // NB togli il default con paramentro event!
 // COSA FA IL PROGRAMMA?
