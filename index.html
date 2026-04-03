@@ -24,11 +24,11 @@
             </div>
             <!-- entro nel card body dove ci sono un minimo di istruzioni per user + form-->
             <div class="card-body">
-               
-                    <h5 class="card-title">Inserisci i dati del passeggero </h5>
-                    <p class="card-text">Il nostro sistema genera la soluzione di viaggio perfetta per te!</p>
-                    <form>
-                         <div class="row">
+
+                <h5 class="card-title">Inserisci i dati del passeggero </h5>
+                <p class="card-text">Il nostro sistema genera la soluzione di viaggio perfetta per te!</p>
+                <form>
+                    <div class="row">
                         <!-- nomne pax-->
                         <div class="col-md-6 mb-3">
                             <label for="nome-pax-label" class="form-label">Nome</label>
@@ -61,22 +61,47 @@
                                 <option value="elder">65+</option>
                             </select>
                         </div>
-                </div>
+                    </div>
 
-                <!-- LO TENGO SE MI SERVE PER DOPO
+                    <!-- LO TENGO SE MI SERVE PER DOPO
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div> -->
-                <button type="submit" class="btn btn-primary btn-bellissimo">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-bellissimo">Submit</button>
                 </form>
             </div>
 
         </div>
     </div>
     <!-- ora metto il mio biglietto con d-none-->
-    <div class="container ticket-container d-none">
-
+    <div class="container ticket-container p-5 d-none">
+        <div class="card ticket-card" style="width: 22rem;">
+            <img src="img/volpino.png" class="card-img-top" alt="volpino-capotreno">
+            <div class="row card-body ">
+                <h4 class="card-title">Il tuo Biglietto</h4>
+                <div class="col-6 ticket-nome-pax">
+                    <h5 class="card-title ticket-nome-title"> Nome</h5>
+                    <p class="card-text ticket-nome-input"></p>
+                </div>
+                <div class="col-6 ticket-cognome-pax">
+                    <h4 class="card-title ticket-cognome-title"> Cognome</h4>
+                    <p class="card-text ticket-cognome-input"></p>
+                </div>
+                 <div class="col-6 ticket-offerta">
+                    <h5 class="card-title ticket-offerta-title"> Offerta</h5>
+                    <p class="card-text ticket-cognome-input"></p>
+                </div>
+                 <div class="col-6 ticket-posto">
+                    <h5 class="card-title ticket-posto-title"> Posto</h5>
+                    <p class="card-text ticket-cognome-input"> Carrozza 5 <br> 13D</p>
+                </div>
+                 <div class="col-6 ticket-prezzo">
+                    <h5 class="card-title ticket-prezzo"> Prezzo</h5>
+                    <h4 class="card-title ticket-prezzo-output"></h4>
+                </div>
+            </div>
+        </div>
 
     </div>
 
