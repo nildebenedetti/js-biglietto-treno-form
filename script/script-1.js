@@ -62,10 +62,14 @@ function clickBtnFormHandler(event) {
         alert('inserisci un valore numerico!');
     }
 
+    const prezzoTicket = myTicketPriceCalculator(etaAnni, trattaKm);
+    
     return;
 
 }
-
+// test funzione
+const prezzoTicket = myTicketPriceCalculator(18, 10);
+console.log(prezzoTicket);
 
 
 
