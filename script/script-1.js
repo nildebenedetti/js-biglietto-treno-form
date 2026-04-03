@@ -16,7 +16,7 @@ function myTicketPriceCalculator(age, fare) {
     }
 
     let prezzoBiglietto = prezzoTratta - sconto;
-    return prezzoBiglietto;
+    return (`€ ${prezzoTratta}`);
 
 
 }
@@ -27,11 +27,13 @@ function myOfferSelector (age) {
     
     if (age < 18) {
         let offertaBiglietto = 'Giovani Spelucchiati';
-    } else if (age >=) { 
+    } else if (age >= 65) { 
         let offertaBiglietto = 'Codini Bianchini';
     } else {
         let offertaBiglietto = 'Pelosino Standard';
     }
+
+    return offertaBiglietto;
 
 }
 
@@ -68,14 +70,12 @@ function clickBtnFormHandler(event) {
     if (inputValueNome === '' || !isNaN(inputValueNome)) {
         alert('inserisci un Nome valido!');
     } 
-    
-    
 
     if (inputValueNome.length <= 1) {
         alert('il nome è troppo corto!');
     } 
     // inserisci il valore pulito nel campo nome input se ha superato i check
-    ticketNomeInput.innerText(inputValueNome);
+    ticketNomeInput.innerText = inputValueNome;
 
     // check integrity e coherence cognome
     if (inputValueCognome === '' || !isNaN(inputValueCognome)) {
@@ -86,28 +86,21 @@ function clickBtnFormHandler(event) {
         alert('il cognome è troppo corto!');
     }
     // inserisci il valore pulito nel campo nome input se ha superato i check
-    ticketCognomeInput.innerText(inputValueCognome);
+    ticketCognomeInput.innerText = inputValueCognome;
     // check integrity e coherence km
     if (inputValueTratta === '' || isNaN(inputValueTratta)) {
         alert('inserisci un valore numerico!');
     }
     
     //scrivi prezzo ticket nel campo prezzo
-
+    ticketPrezzoOutput.innerText = prezzoTicket;
 
     // scrivi offertaBiglietto nel campo offerta
- 
-  
+    ticketOffertaOutput.innerText = offertaBiglietto;
     
     return ticketCard.classList.remove('d-none');
 
-
-    
-
 }
-
-
-
 
 // aggiungere event listener a bottone
 btnForm.addEventListener('click', clickBtnFormHandler);
