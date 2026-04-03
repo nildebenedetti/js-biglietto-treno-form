@@ -67,9 +67,7 @@ function clickBtnFormHandler(event) {
     return;
 
 }
-// test funzione
-const prezzoTicket = myTicketPriceCalculator(18, 10);
-console.log(prezzoTicket);
+
 
 
 
