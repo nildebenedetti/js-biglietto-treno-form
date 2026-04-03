@@ -30,7 +30,9 @@ const cognomePax = document.querySelector('#cognome-pax');
 const trattaKm = document.querySelector('.tratta-km');
 const etaAnni = document.querySelector('.eta-anni');
 const btnForm = document.querySelector('.btn-bellissimo');
-const ticketCard = document.querySelector('.ticket-card')
+const ticketCard = document.querySelector('.ticket-card');
+const ticketNomeInput = document.querySelector('.ticket-nome-input');
+const ticketCognomeInput = document.querySelector('.ticket-cognome-input');
 
 //scrivere il prograsmma event handler
 
@@ -45,6 +47,8 @@ function clickBtnFormHandler(event) {
     // check itegrity e coherence per nome
     if (inputValueNome === '' || !isNaN(inputValueNome)) {
         alert('inserisci un Nome valido!');
+    } else {
+        ticket
     }
 
     if (inputValueNome.length <= 1) {
@@ -65,7 +69,10 @@ function clickBtnFormHandler(event) {
 
     const prezzoTicket = myTicketPriceCalculator(etaAnni, trattaKm);
     
-    return console.log('ciao mamma');
+    return 
+        ticketCard.classList.remove('d-none');
+
+
     
 
 }
