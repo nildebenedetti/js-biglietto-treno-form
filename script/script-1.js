@@ -21,6 +21,20 @@ function myTicketPriceCalculator(age, fare) {
 
 }
 
+  //seleziono offerta match eta''
+function myOfferSelector (age) {
+    let offertaBiglietto = 0;
+    
+    if (age < 18) {
+        let offertaBiglietto = 'Giovani Spelucchiati';
+    } else if (age >=) { 
+        let offertaBiglietto = 'Codini Bianchini';
+    } else {
+        let offertaBiglietto = 'Pelosino Standard';
+    }
+
+}
+
 //==================================================================//
 
 // vado a pescare tutte le variabili che mi serve pescare nell'html
@@ -68,6 +82,8 @@ function clickBtnFormHandler(event) {
     }
 
     const prezzoTicket = myTicketPriceCalculator(etaAnni, trattaKm);
+
+  
     
     return 
         ticketCard.classList.remove('d-none');
