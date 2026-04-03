@@ -47,6 +47,8 @@ const btnForm = document.querySelector('.btn-bellissimo');
 const ticketCard = document.querySelector('.ticket-card');
 const ticketNomeInput = document.querySelector('.ticket-nome-input');
 const ticketCognomeInput = document.querySelector('.ticket-cognome-input');
+const ticketPrezzoOutput = document.querySelector('.ticket-prezzo-output');
+const ticketOffertaOutput = document.querySelector('.ticket-offerta-output');
 
 //scrivere il prograsmma event handler
 
@@ -91,6 +93,7 @@ function clickBtnFormHandler(event) {
     }
     
     //scrivi prezzo ticket nel campo prezzo
+
 
     // scrivi offertaBiglietto nel campo offerta
  
