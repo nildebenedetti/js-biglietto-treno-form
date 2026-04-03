@@ -61,13 +61,16 @@ function clickBtnFormHandler(event) {
     // check itegrity e coherence per nome
     if (inputValueNome === '' || !isNaN(inputValueNome)) {
         alert('inserisci un Nome valido!');
-    } else {
-        ticket
-    }
+    } 
+    
+    
 
     if (inputValueNome.length <= 1) {
         alert('il nome è troppo corto!');
-    }
+    } 
+    
+    ticketNomeInput.innerText(inputValueNome);
+
     // check integrity e coherence cognome
     if (inputValueCognome === '' || !isNaN(inputValueCognome)) {
         alert('inserisci un cognome valido!');
@@ -76,18 +79,19 @@ function clickBtnFormHandler(event) {
     if (inputValueCognome.length <= 1) {
         alert('il cognome è troppo corto!');
     }
+    ticketCognomeInput.innerText(inputValueCognome);
     // check integrity e coherence km
     if (inputValueTratta === '' || isNaN(inputValueTratta)) {
         alert('inserisci un valore numerico!');
     }
+    
     // calcolo prezzo
     const prezzoTicket = myTicketPriceCalculator(etaAnni, trattaKm);
     // calcolo nome offerta per biglietto
     const offertaBiglietto = myOfferSelector(etaAnni);
   
     
-    return 
-        ticketCard.classList.remove('d-none');
+    return ticketCard.classList.remove('d-none');
 
 
     
