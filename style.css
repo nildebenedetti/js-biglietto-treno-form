@@ -19,6 +19,7 @@ body {
     border-radius: 30px;
     box-shadow: 0 10px 0 #bc9a7a; /* Effetto 3D "legno" */
     border: 8px solid #a67c52;
+    margin-top: 20px;
 }
 
 /* La Card come una Letterina d'Amore */
