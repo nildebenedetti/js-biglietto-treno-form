@@ -4,7 +4,7 @@
 // come parametri mi servono eta'e tratta in km
 function myTicketPriceCalculator(age, fare) {
     const prezzoKm = 0.21;
-    const prezzoTratta = prezzoKm * fare;
+    const prezzoTratta = prezzoKm * Number(fare);
     let sconto = 0;
 
     if (age === 'minor') {
@@ -16,7 +16,7 @@ function myTicketPriceCalculator(age, fare) {
     }
 
     let prezzoBiglietto = prezzoTratta - sconto;
-    return (`€ ${prezzoTratta}`);
+    return (`€ ${prezzoBiglietto.toFixed(2)}`);
 
 
 }
@@ -27,7 +27,7 @@ function myOfferSelector (age) {
     
     if (age === 'minor') {
         offertaBiglietto = 'Giovani Spelucchiati';
-    } else if (age === 'major') { 
+    } else if (age === 'elder') { 
         offertaBiglietto = 'Codini Bianchini';
     } else {
         offertaBiglietto = 'Pelosino Standard';
@@ -51,7 +51,8 @@ const ticketNomeInput = document.querySelector('.ticket-nome-input');
 const ticketCognomeInput = document.querySelector('.ticket-cognome-input');
 const ticketPrezzoOutput = document.querySelector('.ticket-prezzo-output');
 const ticketOffertaOutput = document.querySelector('.ticket-offerta-output');
-const etaSelected = document.querySelector('.eta-anni-sel');
+const etaSelect = document.querySelector('.eta-anni-sel');
+const userSelectEta = etaSelect.value;
 
 //scrivere il prograsmma event handler
 
@@ -63,9 +64,9 @@ function clickBtnFormHandler(event) {
     let inputValueCognome = cognomePax.value.trim();
     let inputValueTratta = trattaKm.value.trim();
     // calcolo prezzo
-    const prezzoTicket = myTicketPriceCalculator(etaAnni, trattaKm);
+    const prezzoTicket = myTicketPriceCalculator(userSelectEta, trattaKm);
     // calcolo nome offerta per biglietto
-    const offertaBiglietto = myOfferSelector(etaAnni);
+    const offertaBiglietto = myOfferSelector(userSelectEta);
 
     // check itegrity e coherence per nome
     if (inputValueNome === '' || !isNaN(inputValueNome)) {
