@@ -4,14 +4,15 @@
 // come parametri mi servono eta'e tratta in km
 function myTicketPriceCalculator(age, fare) {
     const prezzoKm = 0.21;
-    const prezzoTratta = parseFloat(prezzoKm) * Number(fare);
+    const km = parseFloat(fare);
+    const prezzoTratta = prezzoKm * km;
     let sconto = 0;
 
-    if (age.value === 'minor') {
+    if (age === 'minor') {
         sconto = (prezzoTratta) * 0.2;
     }
 
-    else if (age.value === 'elder') {
+    else if (age === 'elder') {
         sconto = (prezzoTratta) * 0.4;
     }
 
@@ -25,9 +26,9 @@ function myTicketPriceCalculator(age, fare) {
 function myOfferSelector (age) {
     let offertaBiglietto = 0;
     
-    if (age.value === 'minor') {
+    if (age === 'minor') {
         offertaBiglietto = 'Giovani Spelucchiati';
-    } else if (age.value === 'elder') { 
+    } else if (age === 'elder') { 
         offertaBiglietto = 'Codini Bianchini';
     } else {
         offertaBiglietto = 'Pelosino Standard';
@@ -66,9 +67,9 @@ function clickBtnFormHandler(event) {
     let selectedAgeValue = etaSelect.value;
 
     // calcolo prezzo
-    const prezzoTicket = myTicketPriceCalculator(etaSelect, inputValueTratta);
+    const prezzoTicket = myTicketPriceCalculatr(selectedAgeValue, inputValueTratta);
     // calcolo nome offerta per biglietto
-    const offertaBiglietto = myOfferSelector(userSelectEta);
+    const offertaBiglietto = myOfferSelector(selectedAgeValue);
 
     // check itegrity e coherence per nome
     if (inputValueNome === '' || !isNaN(inputValueNome)) {
