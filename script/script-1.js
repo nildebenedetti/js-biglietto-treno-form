@@ -25,7 +25,7 @@ function myTicketPriceCalculator(age, fare) {
 function myOfferSelector (age) {
     let offertaBiglietto = 0;
     
-    if (age < 18) {
+    if (age ===) {
         let offertaBiglietto = 'Giovani Spelucchiati';
     } else if (age >= 65) { 
         let offertaBiglietto = 'Codini Bianchini';
@@ -51,6 +51,7 @@ const ticketNomeInput = document.querySelector('.ticket-nome-input');
 const ticketCognomeInput = document.querySelector('.ticket-cognome-input');
 const ticketPrezzoOutput = document.querySelector('.ticket-prezzo-output');
 const ticketOffertaOutput = document.querySelector('.ticket-offerta-output');
+const minor = document.querySelector('.eta-anni-sel');
 
 //scrivere il prograsmma event handler
 
