@@ -22,13 +22,13 @@ function myTicketPriceCalculator(age, fare) {
 
 }
 
-  //seleziono offerta match eta''
-function myOfferSelector (age) {
+//seleziono offerta match eta''
+function myOfferSelector(age) {
     let offertaBiglietto = 0;
-    
+
     if (age === 'minor') {
         offertaBiglietto = 'Giovani Spelucchiati';
-    } else if (age === 'elder') { 
+    } else if (age === 'elder') {
         offertaBiglietto = 'Codini Bianchini';
     } else {
         offertaBiglietto = 'Pelosino Standard';
@@ -67,18 +67,18 @@ function clickBtnFormHandler(event) {
     let selectedAgeValue = etaSelect.value;
 
     // calcolo prezzo
-    const prezzoTicket = myTicketPriceCalculatr(selectedAgeValue, inputValueTratta);
+    const prezzoTicket = myTicketPriceCalculator(selectedAgeValue, inputValueTratta);
     // calcolo nome offerta per biglietto
     const offertaBiglietto = myOfferSelector(selectedAgeValue);
 
     // check itegrity e coherence per nome
     if (inputValueNome === '' || !isNaN(inputValueNome)) {
         alert('inserisci un Nome valido!');
-    } 
+    }
 
     if (inputValueNome.length <= 1) {
         alert('il nome è troppo corto!');
-    } 
+    }
     // inserisci il valore pulito nel campo nome input se ha superato i check
     ticketNomeInput.innerText = inputValueNome;
 
@@ -96,8 +96,8 @@ function clickBtnFormHandler(event) {
     if (inputValueTratta === '' || isNaN(inputValueTratta)) {
         alert('inserisci un valore numerico!');
     }
-    
-    //scrivi prezzo ticket nel campo prezzo
+
+   //scrivi prezzo ticket nel campo prezzo
     ticketPrezzoOutput.innerText = prezzoTicket;
 
     // scrivi offertaBiglietto nel campo offerta
@@ -106,6 +106,7 @@ function clickBtnFormHandler(event) {
     return ticketCard.classList.remove('d-none');
 
 }
+
 
 // aggiungere event listener a bottone
 btnForm.addEventListener('click', clickBtnFormHandler);
@@ -120,8 +121,3 @@ btnForm.addEventListener('click', clickBtnFormHandler);
 // stampa i dati dei campi value con innerHTML
 // dentro la card che HAI PREPARATO, VERO????
 // RIMUOVERE d-none a container ticket
-
-
-
-
-
