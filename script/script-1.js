@@ -62,6 +62,9 @@ function clickBtnFormHandler(event) {
     let inputValueNome = nomePax.value.trim();
     let inputValueCognome = cognomePax.value.trim();
     let inputValueTratta = trattaKm.value.trim();
+    // Recuperiamo il valore della select QUI, non fuori
+    let selectedAgeValue = etaSelect.value;
+
     // calcolo prezzo
     const prezzoTicket = myTicketPriceCalculator(etaSelect, inputValueTratta);
     // calcolo nome offerta per biglietto
