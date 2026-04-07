@@ -7,11 +7,11 @@ function myTicketPriceCalculator(age, fare) {
     const prezzoTratta = prezzoKm * fare;
     let sconto = 0;
 
-    if (age < 18) {
+    if (age === 'minor') {
         sconto = (prezzoTratta) * 0.2;
     }
 
-    else if (age >= 65) {
+    else if (age === 'elder') {
         sconto = (prezzoTratta) * 0.4;
     }
 
@@ -25,12 +25,12 @@ function myTicketPriceCalculator(age, fare) {
 function myOfferSelector (age) {
     let offertaBiglietto = 0;
     
-    if (age ===) {
-        let offertaBiglietto = 'Giovani Spelucchiati';
-    } else if (age >= 65) { 
-        let offertaBiglietto = 'Codini Bianchini';
+    if (age === 'minor') {
+        offertaBiglietto = 'Giovani Spelucchiati';
+    } else if (age === 'major') { 
+        offertaBiglietto = 'Codini Bianchini';
     } else {
-        let offertaBiglietto = 'Pelosino Standard';
+        offertaBiglietto = 'Pelosino Standard';
     }
 
     return offertaBiglietto;
@@ -51,7 +51,7 @@ const ticketNomeInput = document.querySelector('.ticket-nome-input');
 const ticketCognomeInput = document.querySelector('.ticket-cognome-input');
 const ticketPrezzoOutput = document.querySelector('.ticket-prezzo-output');
 const ticketOffertaOutput = document.querySelector('.ticket-offerta-output');
-const minor = document.querySelector('.eta-anni-sel');
+const etaSelected = document.querySelector('.eta-anni-sel');
 
 //scrivere il prograsmma event handler
 
